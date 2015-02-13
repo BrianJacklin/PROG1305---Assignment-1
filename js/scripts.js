@@ -1,39 +1,67 @@
-window.onload = function () {
-	// grab elements faster can use . and # characters
-	var $ = function (selector) {return document.querySelector(selector);};	
-	var divs = document.getElementsByTagName("div");
-	var items = [];
-	var descs  = [];
-	var titles  = [];
 
-	//catch + add items to various arrays for later use. scrape based on class name
-	for (var i = 0; i < divs.length; i++){
-		if(divs[i].className == "accordion-item"){
-			items.push(divs[i]);
-		}
-		if(divs[i].className == "accordion-title"){
-			titles.push(divs[i]);
-		}
-		if(divs[i].className == "accordion-desc"){
-			descs.push(divs[i]);
-		}
-	}
+window.onload = function() {
+  var $ = function (selector){return document.querySelector(selector);};  // this is not jQuery
 
-	// see if arrays are gathering correctly
-	console.log(items);
-	console.log(descs);
-	console.log(titles);
+/* ############################################################## 
+                      Navigation
+   ############################################################## */
+  function toggleMenu(){
+    $("#main-nav").classList.toggle("open");
+    $(".overlay").classList.toggle("open");
+    $(".trigger").classList.toggle("open");
+    $("#body").classList.toggle("open");
+  }
+  
+  //behaviour if you click the menu button
+  $(".trigger").onclick = toggleMenu;
+  
+  //behaviour if you click a menu item
+  $("#main-nav").getElementsByTagName("li").onclick = toggleMenu;
+  
+  //behaviour if you click the overlay
+  $(".overlay").onclick = toggleMenu;
 
-		for(var i = 0; i < items.length;i++){
-			titles[i].onclick = function (){
-				this.classList.toggle("highlight");
-				var open = this.parentNode.querySelector(".accordion-desc");
-				var close = this.parentNode.querySelector(".closer");
-				open.classList.toggle("open");
-				close.classList.toggle("close");
-				if(open.className == "accordion-desc open"){
-					items
-				}
-			};
-		}
-}//window.onload
+
+/* ############################################################## 
+                      ASSIGNMENT #1 START
+   ############################################################## */
+   
+  var allItems = document.querySelectorAll(".item");  
+  var targets = $("#accordion").getElementsByTagName("a");
+
+  function hideAll(){
+    for(var j = 0; j <= allItems.length - 1; j++){  
+        allItems[j].classList.remove("open"); // hide all up currently open
+    }	 // for j loop [inner]
+  }
+
+  hideAll(); // ensure that even all accordions are closed on load. Remove this if you want an item open by default
+
+
+  /* accordion */
+  function accordion(){
+
+    for(var i = 0; i <= targets.length - 1; i++){
+      
+      targets[i].onclick = function(event){
+
+        event.preventDefault(); // stops first click from trying to fire anchor href.  
+
+        if(this.parentNode.classList.contains("open") == false){
+          hideAll();
+          this.parentNode.classList.add("open");
+        }else{
+          hideAll();
+        }
+
+      }; // accordion <a> click
+      
+    };// for i loop 
+
+  }
+
+  accordion(); // register the click events. If this is not called first, the initial click does not fire correctly
+  
+  $("#accordion").onclick = accordion;
+
+};// onload

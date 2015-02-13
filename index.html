@@ -1,66 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Assignment #1 - Create an accordion</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+
+  <title>PROG1305 - Assignment #1 - Accordion</title>
+
+  <link href='css/style.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <script src="js/prefixfree.min.js"></script> <!-- Add Browser Prefixes where required. -->
 </head>
-<body>
-<div class="container">
-	<div id="accordion">
-		<div class="accordion-item">
-			<div class="accordion-title">
-				<a href="#"><img class="closer" src="img/plus.png" width="50"></a>
-				<h1>Lorem Title Ipsum Bacon Zombie Poutine</h1>
-			</div >	
-			<div class="accordion-desc">
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-			</div>
-		</div>
-	<div id="accordion">
-		<div class="accordion-item">
-			<div class="accordion-title">
-				<a href="#"><img class="closer" src="img/plus.png" width="50"></a>
-				<h1>Lorem Title Ipsum Bacon Zombie Poutine</h1>
-			</div >	
-			<div class="accordion-desc">
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-			</div>
-		</div>
-	<div id="accordion">
-		<div class="accordion-item">
-			<div class="accordion-title">
-				<a href="#"><img class="closer" src="img/plus.png" width="50"></a>
-				<h1>Lorem Title Ipsum Bacon Zombie Poutine</h1>
-			</div >	
-			<div class="accordion-desc">
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<div class="accordion-title">
-				<a href="#"><img class="closer" src="img/plus.png" height="50"></a>
-				<h1>Lorem Title Ipsum Bacon Zombie Poutine</h1>
-			</div >			
-			<div class="accordion-desc">
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<div class="accordion-title">
-				<a href="#"><img class="closer" src="img/plus.png" width="50"></a>
-				<h1>Lorem Title Ipsum Bacon Zombie Poutine</h1>
-			</div >		
-			<div class="accordion-desc">
-				<ul>
-				   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-				   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-				   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-				   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-				</ul>            
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript" src="js/scripts.js"></script>
+
+<body id="body">
+  <div class="container">
+
+    <a href="#" class="trigger">
+      <div class="menu">&equiv;</div>
+      <div class="close">&times;</div>
+    </a>
+
+    <nav id="main-nav">
+      <div class="brand"><img src="http://placehold.it/230x130/29939a/ffffff&text=PROG1305+Assignment+#1" alt="" /></div>
+      <ul>
+        <li><a href="#">Assignment #1 </a></li>
+        <li><a href="#">Assignment #2</a></li>
+        <li><a href="#">Assignment #3</a></li>
+        <li><a href="#">Assginemtn #4</a></li>
+      </ul>
+    </nav>
+
+   <div id="page">
+     <header>
+       <img src="http://placehold.it/910x250/29939a/ffffff&text=PROG1305+Assignment+1" alt="" />
+     </header>
+      <div id="accordion">
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"> </div></a>
+      <div class="content">
+        <h3>Big title in this accordion item!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <button>Action!</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex<img src="http://placehold.it/75x75" align="right" style="margin:10px;"> ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate 
+        rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis <img src="http://placehold.it/75x75" align="left" style="margin:10px;">autem itaque laudantium, eaque. </p>      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+      </div>
+
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rerum soluta harum esse libero eum, mollitia incidunt quia nisi quisquam facere illo maxime culpa dolorem corporis autem itaque laudantium, eaque.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illum vel in temporibus dolor obcaecati corrupti iste quas exercitationem saepe distinctio cumque, accusantium molestiae sapiente itaque facilis, deserunt esse hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illum vel in temporibus dolor obcaecati corrupti iste quas exercitationem saepe distinctio cumque, accusantium molestiae sapiente itaque facilis, deserunt esse hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illum vel in temporibus dolor obcaecati corrupti iste quas exercitationem saepe distinctio cumque, accusantium molestiae sapiente itaque facilis, deserunt esse hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illum vel in temporibus dolor obcaecati corrupti iste quas exercitationem saepe distinctio cumque, accusantium molestiae sapiente itaque facilis, deserunt esse hic.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione illo quisquam, qui voluptatem, sed dolores! Illum, numquam, animi. Et, laboriosam eius quae molestiae consequuntur. Consectetur nihil quas dicta. Est, facere.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <a href="#">This is a clickable title <div class="plus"></div></a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto sint odit quam temporibus. Recusandae cum, voluptas! Inventore porro doloribus eligendi, ab voluptate ad at blanditiis recusandae cumque, distinctio, eveniet.</p>
+      </div>
+    </div>
+  </div>
+   </div>
+    <div class="overlay"></div>
+  </div>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
